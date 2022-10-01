@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор расчета рыбы</title>
+    <link href="styleForel.css" rel="stylesheet">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+</head>
+<body>
+
+    <div class="flex_container">
+        <div class="flex_box_tem title_flex">Рассчёт стоимости и доставки</div>
+        <div class="flex_box_tem">
+            <fieldset>
+                <legend>Доставка</legend>
+                <label><input id="not_dostavka" name="dostavka" type="radio" value="not_dostavka"> Не учитывать
+                    доставку</label><br>
+                <label><input checked id="for_all_massa" name="dostavka" type="radio" value="for_all_massa"> Учитывать
+                    доставку по общей
+                    массе</label><br>
+                <label style="display: none"><input id="for_position" name="dostavka" type="radio" value="for_position"> Учитывать доставку по
+                    массе каждой
+                    выбраной позиции</label>
+            </fieldset>
+        </div>
+        <div class="flex_box_tem">
+            <table class="iksweb">
+                <tbody>
+                <tr>
+                    <th rowspan="2">Вид продукции</th>
+                    <th id="allMassa" rowspan="2">Масса</th>
+
+                </tr>
+                <tr>
+                    <th>Цена за 1 кг</th>
+                    <th>Стоимость доставки за 1 кг</th>
+                    <th>Общая стоимость c доставкой</th>
+
+                </tr>
+                <tr id="row_givaya">
+                    <td>Живая</td>
+                    <td><input min="0" step="0.01" type="number" value="0"></td>
+                    <td class="price">450.00</td>
+                    <td class="dostavka_price"></td>
+                    <td class="total_price"></td>
+
+                </tr>
+                <tr id="row_sveg">
+                    <td>Свежая</td>
+                    <td><input min="0" step="0.01" type="number" value="0"></td>
+                    <td class="price">450.00</td>
+                    <td class="dostavka_price"></td>
+                    <td class="total_price"></td>
+
+                </tr>
+                <tr id="row_PSG">
+                    <td>ПСГ</td>
+                    <td><input min="0" step="0.01" type="number" value="0"></td>
+                    <td class="price">510.00</td>
+                    <td class="dostavka_price"></td>
+                    <td class="total_price"></td>
+
+                </tr>
+                <tr id="row_PSG_1_7">
+                    <td>ПСГ 1,2-1,7</td>
+                    <td><input min="0" step="0.01" type="number" value="0"></td>
+                    <td class="price">550.00</td>
+                    <td class="dostavka_price"></td>
+                    <td class="total_price"></td>
+
+                </tr>
+                <tr id="row_stayk">
+                    <td>Стейк</td>
+                    <td><input min="0" step="0.01" type="number" value="0"></td>
+                    <td class="price">610.00</td>
+                    <td class="dostavka_price"></td>
+                    <td class="total_price"></td>
+                </tr>
+                <tr id="row_HK_03_06">
+                    <td>ХК 0,3-0,6</td>
+                    <td><input min="0" step="0.01" type="number" value="0"></td>
+                    <td class="price">810.00</td>
+                    <td class="dostavka_price"></td>
+                    <td class="total_price"></td>
+
+                </tr>
+                <tr id="row_HK_06_12">
+                    <td>ХК 0,6-1,2</td>
+                    <td><input min="0" step="0.01" type="number" value="0"></td>
+                    <td class="price">850.00</td>
+                    <td class="dostavka_price"></td>
+                    <td class="total_price"></td>
+
+                </tr>
+                <tr id="row_sup">
+                    <td>Суповой набор из форели охлаждённой</td>
+                    <td><input min="0" step="0.01" type="number" value="0"></td>
+                    <td class="price">140.0</td>
+                    <td class="dostavka_price"></td>
+                    <td class="total_price"></td>
+
+                </tr>
+                <tr class="row_finish">
+                    <td colspan="2">Масса / Стоимость доставки</td>
+                    <td class="finish_sum" colspan="5" id="massa_price_dostavka">0 кг/ 0 руб.</td>
+                </tr>
+                <tr class="row_finish">
+                    <td colspan="2">К оплате</td>
+                    <td class="finish_sum" colspan="5" id="amount">0 руб.</td>
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="flex_box_tem">
+            <button id="button_clear">Очистить</button>
+        </div>
+    </div>
+<script src="scriptForel.js"></script>
+</body>
+</html>

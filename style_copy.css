@@ -1,0 +1,148 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@300&family=Exo+2:wght@200&family=Open+Sans&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #F1EFF1;
+}
+
+.flex_container{
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    flex-flow: column;
+    margin: 0 auto;
+    width: 50%;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.flex_box_tem{
+    margin: 10px;
+}
+
+.title_flex{
+    height: 15px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+table.iksweb {
+    text-decoration: none;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: lightsteelblue;
+    font-family: system-ui;
+    width: 100%;
+    /*тень*/
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+
+}
+
+table.iksweb th {
+    font-weight: bold;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #0f65a3;
+}
+
+table.iksweb td {
+    font-size: 14px;
+    color: #354251;
+}
+
+
+table.iksweb td, table.iksweb th {
+
+    padding: 5px 5px 5px 5px;
+    line-height: 18px;
+    vertical-align: middle;
+    border: 1px solid floralwhite;
+
+}
+
+
+.selectActive{
+    background-color: rgb(204, 238, 204);
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+fieldset{
+
+    background-color: aliceblue;
+    border-radius: 10px;
+    border: #0f65a3 2px solid;
+    padding: 5px;
+    /*padding-bottom: 10px;*/
+
+}
+
+.shadow{
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+    padding: 10px;
+}
+
+table.iksweb td.finish_sum{
+    font-size: x-large;
+}
+
+label{
+    font-size: 14px;
+
+}
+
+.row_finish{
+
+    background-color: #0f65a3;
+
+}
+table.iksweb .row_finish td{
+    color: antiquewhite;
+    font-size: 16px;
+}
+
+input[type="number"]{
+    width: 70px;
+
+}
+
+table tr:hover {
+    box-shadow: 0 0 3px rgba(0,0,0,0.5);
+    /*background-color: beige;*/
+}
+
+@media (max-width:992px) {
+    .flex_container{
+        width: 100%;
+        height: 100%;
+    }
+
+    table.iksweb td{
+        font-size: 10px;
+    }
+    table.iksweb .row_finish td{
+        font-size: 10px;
+    }
+
+    body{
+        font-size: 10px;
+    }
+
+    table.iksweb th{
+        font-size: 10px;
+    }
+    .title_flex{display: none}
+}
+
+
